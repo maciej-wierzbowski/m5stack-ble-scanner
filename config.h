@@ -1,0 +1,73 @@
+/**
+ * M5Stack Atom S3R BLE Scanner - Configuration
+ * 
+ * Edit these values before uploading
+ */
+
+#ifndef CONFIG_H
+#define CONFIG_H
+
+// ============ WiFi Configuration ============
+// WiFi network to connect for uploading data
+const char* WIFI_SSID = "YOUR_WIFI_SSID";
+const char* WIFI_PASSWORD = "YOUR_WIFI_PASSWORD";
+
+// ============ Server Configuration ============
+// BLE Monitor server address
+const char* SERVER_HOST = "192.168.1.100";  // Change to your server IP
+const int SERVER_PORT = 8080;
+const char* API_ENDPOINT = "/api/esp32/ble";
+
+// ============ Device Configuration ============
+// Unique device ID for this device
+const char* DEVICE_ID = "M5ATOM-BLE-01";
+
+// ============ Scanner Configuration ============
+// How long to scan before uploading (seconds)
+#define SCAN_DURATION_SEC 30
+
+// BLE scan interval (in 0.625ms units, 80 = 50ms)
+#define BLE_SCAN_INTERVAL 80
+
+// BLE scan window (in 0.625ms units, 80 = 50ms)  
+#define BLE_SCAN_WINDOW 80
+
+// Active scanning (sends SCAN_REQ to get SCAN_RSP)
+#define BLE_ACTIVE_SCAN true
+
+// ============ Buffer Configuration ============
+// Maximum number of unique devices to buffer
+#define MAX_DEVICES_BUFFER 100
+
+// Maximum devices to display on screen
+#define MAX_DISPLAY_DEVICES 50
+
+// Minimum RSSI to capture (filter weak signals)
+#define MIN_RSSI -95
+
+// ============ Timing Configuration ============
+// WiFi connection timeout (milliseconds)
+#define WIFI_CONNECT_TIMEOUT_MS 15000
+
+// HTTP request timeout (milliseconds)
+#define HTTP_TIMEOUT_MS 10000
+
+// Delay between upload cycles (milliseconds)
+#define CYCLE_DELAY_MS 1000
+
+// Display refresh interval (milliseconds)
+#define DISPLAY_REFRESH_MS 500
+
+// ============ Display Configuration ============
+// Screen dimensions for Atom S3R (128x128)
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 128
+
+// Max devices visible on screen at once
+#define MAX_VISIBLE_DEVICES 7
+
+// ============ Debug Configuration ============
+// Set to 1 to enable verbose serial output
+#define DEBUG_VERBOSE 1
+
+#endif // CONFIG_H
