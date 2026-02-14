@@ -47,7 +47,7 @@ Install via Library Manager (`Tools` → `Manage Libraries`):
 ### Step 1: Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/m5stack-ble-scanner.git
+git clone https://github.com/maciej-wierzbowski/m5stack-ble-scanner.git
 cd m5stack-ble-scanner
 ```
 
